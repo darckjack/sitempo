@@ -18,6 +18,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::resource('registros', 'API\RegistroController');
+Route::resource('lineas', 'API\LineaController');
+Route::resource('estaciones', 'API\EstacionController');
 
 Route::get('lines', 'API\ConsultController@lines');
 Route::get('lines/{line}/stations', 'API\ConsultController@stations');
