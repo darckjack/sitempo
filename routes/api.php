@@ -20,6 +20,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::resource('registros', 'API\RegistroController');
 Route::resource('lineas', 'API\LineaController');
 Route::resource('estaciones', 'API\EstacionController');
+Route::resource('trenes', 'API\TrenController');
+Route::resource('estacionesLineas', 'API\EstacionesLineaController');
+Route::resource('estacionesTrenes', 'API\EstacionesTrenController');
 
 Route::get('lines', 'API\ConsultController@lines');
 Route::get('lines/{line}/stations', 'API\ConsultController@stations');
