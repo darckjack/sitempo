@@ -7,7 +7,7 @@ namespace App\Http\Controllers\API;
 use App\EstacionesLineas;
 use Illuminate\Http\Request;
 
-class EstacionesLineasController extends BaseController
+class EstacionesLineaController extends BaseController
 {
     /**
      * Display a listing of the resource.
