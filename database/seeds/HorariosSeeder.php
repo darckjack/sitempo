@@ -11,8 +11,8 @@ class HorariosSeeder extends Seeder
      */
     public function run()
     {
-        $startTime = \Carbon\Carbon::create(2019,5, 20, 5, 0, 0);
-        $endTime = \Carbon\CarbonImmutable::create(2019,5, 20, 23, 0, 0);
+        $startTime = \Carbon\Carbon::create(2019,10, 31, 5, 0, 0);
+        $endTime = \Carbon\CarbonImmutable::create(2019,10, 31, 23, 0, 0);
 
         for($startTime; $startTime <= $endTime; $startTime->addMinutes(6)) {
             $startStation = \Carbon\CarbonImmutable::parse($startTime->toDateTimeString());
