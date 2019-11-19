@@ -1,5 +1,8 @@
 <?php
 
+use App\Horario;
+use Carbon\Carbon;
+use Carbon\CarbonImmutable;
 use Illuminate\Database\Seeder;
 
 class HorariosSeeder extends Seeder
@@ -11,22 +14,22 @@ class HorariosSeeder extends Seeder
      */
     public function run()
     {
-        $startTime = \Carbon\Carbon::create(2019,10, 31, 5, 0, 0);
-        $endTime = \Carbon\CarbonImmutable::create(2019,10, 31, 23, 0, 0);
+        $startTime = Carbon::create(2019,11, 21, 5, 0, 0);
+        $endTime = CarbonImmutable::create(2019,11, 21, 23, 0, 0);
 
         for($startTime; $startTime <= $endTime; $startTime->addMinutes(6)) {
-            $startStation = \Carbon\CarbonImmutable::parse($startTime->toDateTimeString());
+            $startStation = CarbonImmutable::parse($startTime->toDateTimeString());
 
             for ($i = 0; $i < 19; $i++) {
                 $linea1_id_regreso = 19;
-                \App\Horario::create([
+                Horario::create([
                     'arrive_time' => $startStation->addMinutes(4*$i),
                     'leave_time' => $startStation->addMinutes(4*$i),
                     'linea_id' => 1,
                     'estacion_id' => $i + 1
                 ]);
 
-                \App\Horario::create([
+                Horario::create([
                     'arrive_time' => $startStation->addMinutes(4*$i),
                     'leave_time' => $startStation->addMinutes(4*$i),
                     'linea_id' => 1,
@@ -38,42 +41,42 @@ class HorariosSeeder extends Seeder
                 $linea2_id_regreso = 28;
 
                 if ($i = 0) {
-                    \App\Horario::create([
+                    Horario::create([
                         'arrive_time' => $startStation->addMinutes(4*$i),
                         'leave_time' => $startStation->addMinutes(4*$i),
                         'linea_id' => 2,
                         'estacion_id' => 12
                     ]);
 
-                    \App\Horario::create([
+                    Horario::create([
                         'arrive_time' => $startStation->addMinutes(4*$i),
                         'leave_time' => $startStation->addMinutes(4*$i),
                         'linea_id' => 2,
                         'estacion_id' => $linea2_id_regreso - $i
                     ]);
                 } elseif ($i = 9) {
-                    \App\Horario::create([
+                    Horario::create([
                         'arrive_time' => $startStation->addMinutes(4*$i),
                         'leave_time' => $startStation->addMinutes(4*$i),
                         'linea_id' => 2,
                         'estacion_id' => $linea2_id_regreso - $i
                     ]);
 
-                    \App\Horario::create([
+                    Horario::create([
                         'arrive_time' => $startStation->addMinutes(4*$i),
                         'leave_time' => $startStation->addMinutes(4*$i),
                         'linea_id' => 2,
                         'estacion_id' => 12
                     ]);
                 } else {
-                    \App\Horario::create([
+                    Horario::create([
                         'arrive_time' => $startStation->addMinutes(4*$i),
                         'leave_time' => $startStation->addMinutes(4*$i),
                         'linea_id' => 2,
                         'estacion_id' => $i + 19
                     ]);
 
-                    \App\Horario::create([
+                    Horario::create([
                         'arrive_time' => $startStation->addMinutes(4*$i),
                         'leave_time' => $startStation->addMinutes(4*$i),
                         'linea_id' => 2,

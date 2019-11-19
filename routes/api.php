@@ -27,3 +27,7 @@ Route::resource('estacionesTrenes', 'API\EstacionesTrenController');
 Route::get('lines', 'API\ConsultController@lines');
 Route::get('lines/{line}/stations', 'API\ConsultController@stations');
 Route::get('lines/{line}/stations/{station}/hours', 'API\ConsultController@hours');
+Route::get('prediction2/{id}', 'API\PrediccionesController@predictionGetType2');
+Route::get('prediction4/{id}', 'API\PrediccionesController@predictionGetType4');
+Route::get('prediction_web2/{id}', 'API\PrediccionesController@predictionWebType2');
+Route::get('prediction_web4/{id}', 'API\PrediccionesController@predictionWebType4');
