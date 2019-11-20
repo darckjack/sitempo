@@ -27,6 +27,8 @@ Route::get('prediction2/{id}', 'API\PrediccionesController@predictionGetType2');
 Route::get('prediction4/{id}', 'API\PrediccionesController@predictionGetType4');
 Route::get('prediction_web2/{id}', 'API\PrediccionesController@predictionWebType2');
 Route::get('prediction_web4/{id}', 'API\PrediccionesController@predictionWebType4');
+Route::post('prediction2/{id}', 'API\PrediccionesController@predictionPostType2');
+Route::post('prediction4/{id}', 'API\PrediccionesController@predictionPostType4');
 
 Route::group([
     'middleware' => 'api',
