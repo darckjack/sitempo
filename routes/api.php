@@ -13,10 +13,6 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
 Route::resource('registros', 'API\RegistroController');
 Route::resource('lineas', 'API\LineaController');
 Route::resource('estaciones', 'API\EstacionController');
@@ -31,3 +27,13 @@ Route::get('prediction2/{id}', 'API\PrediccionesController@predictionGetType2');
 Route::get('prediction4/{id}', 'API\PrediccionesController@predictionGetType4');
 Route::get('prediction_web2/{id}', 'API\PrediccionesController@predictionWebType2');
 Route::get('prediction_web4/{id}', 'API\PrediccionesController@predictionWebType4');
+
+Route::group([
+    'middleware' => 'api',
+    'prefix' => 'auth'
+], function ($router) {
+    Route::post('login', 'API\AuthenticationController@login');
+    Route::post('logout', 'API\AuthenticationController@logout');
+    Route::post('refresh', 'API\AuthenticationController@refresh');
+    Route::get('me', 'API\AuthenticationController@me');
+});

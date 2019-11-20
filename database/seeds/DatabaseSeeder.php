@@ -16,5 +16,6 @@ class DatabaseSeeder extends Seeder
         $this->call(TrenesSeeder::class);
         $this->call(EstacionesLineasSeeder::class);
         $this->call(HorariosSeeder::class);
+        $this->call(UserSeeder::class);
     }
 }
