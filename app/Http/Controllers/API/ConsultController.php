@@ -8,6 +8,7 @@ use App\Estacion;
 use App\EstacionesLineas;
 use App\Horario;
 use App\Linea;
+use App\Ruta;
 use Illuminate\Http\Request;
 
 class ConsultController extends BaseController
@@ -25,12 +26,24 @@ class ConsultController extends BaseController
             $stations []= Estacion::whereId($stations_line->estacion_id)->get()->first();
         }
 
-        return $this->sendResponse($stations, 'Estaciones retrived successfully');
+        return $this->sendResponse($stations, 'Estaciones retrieved successfully');
     }
 
     public function hours($line, $station) {
         $hours = Horario::whereLineaId($line)->whereEstacionId($station)->get()->all();
 
-        return $this->sendResponse($hours, 'Horarios retrived successfully');
+        return $this->sendResponse($hours, 'Horarios retrieved successfully');
+    }
+
+    public function rutas() {
+        $ruta = Ruta::all();
+
+        return $this->sendResponse($ruta, 'Ruta retrieved successfully');
+    }
+
+    public function ruta($route) {
+        $hours = Horario::whereRutaId($route)->get()->all();
+
+        return $this->sendResponse($hours, 'Ruta retrieved successfully');
     }
 }

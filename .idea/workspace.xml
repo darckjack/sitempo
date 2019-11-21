@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8a475c3-a0cd-422e-9870-67ddd6b4954b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Horario.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Horario.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/ConsultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/ConsultController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/EstacionesTrenController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/EstacionesTrenController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/PrediccionesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/PrediccionesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_05_20_044505_create_horarios_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_05_20_044505_create_horarios_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/EstacionesLineasSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/EstacionesLineasSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/EstacionesSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/EstacionesSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/HorariosSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/HorariosSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -167,7 +175,8 @@
       <workItem from="1573944563516" duration="3093000" />
       <workItem from="1574198813921" duration="5909000" />
       <workItem from="1574229174311" duration="835000" />
-      <workItem from="1574280744117" duration="5212000" />
+      <workItem from="1574280744117" duration="5949000" />
+      <workItem from="1574324294084" duration="7634000" />
     </task>
     <servers />
   </component>

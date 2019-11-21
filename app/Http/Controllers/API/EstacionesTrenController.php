@@ -4,10 +4,10 @@
 namespace App\Http\Controllers\API;
 
 
-use App\EstacionesTreneses;
+use App\EstacionesTrenes;
 use Illuminate\Http\Request;
 
-class EstacionesTrenesController extends BaseController
+class EstacionesTrenController extends BaseController
 {
     /**
      * Display a listing of the resource.

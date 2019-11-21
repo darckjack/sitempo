@@ -29,4 +29,9 @@ use Illuminate\Database\Eloquent\Model;
 class Horario extends Model
 {
     protected $guarded = [];
+    protected $appends = ['Estacion'];
+
+    public function getEstacionAttribute() {
+        return Estacion::whereId($this->estacion_id)->first()->name;
+    }
 }
